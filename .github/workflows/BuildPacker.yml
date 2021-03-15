@@ -23,5 +23,7 @@ jobs:
          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
         with:
-          args: "build /github/workspace/ami.json"
+          args: "build /github/workspace/packer/ami.json"
       
+
+
