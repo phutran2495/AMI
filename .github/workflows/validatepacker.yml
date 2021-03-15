@@ -28,7 +28,7 @@ jobs:
         with: 
           command: validate
           arguments: -syntax-only
-          target: /github/workspace/ami.json/ami.json
+          target: /github/workspace/packer/ami.json
         env:
           PACKER_LOG: 1
 
