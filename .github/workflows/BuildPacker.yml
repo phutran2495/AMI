@@ -16,14 +16,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
-      - name: build and register packer
-        uses: docker://hashicorp/packer:light 
-        env: 
-         AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
-         AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+      - name: Build Artifact
+        uses: hashicorp/packer-github-actions@master
         with:
-          args: "build /github/workspace/packer/ami.json"
-      
-
-
+          command: build
+          arguments: "-color=false -on-error=abort"
+          target: /github/workspace/packer/ami.json
+        env:
+          PACKER_LOG: 1
