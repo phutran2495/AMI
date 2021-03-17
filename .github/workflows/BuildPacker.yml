@@ -19,8 +19,8 @@ jobs:
         uses: hashicorp/packer-github-actions@master
         with:
           command: build 
-          arguments: "-var-file=/github/workspace/packer/vars.json"
-          target: /github/workspace/packer/ami.json
+          arguments: "-var-file=packer/vars.json"
+          target: packer/ami.json
         env:
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
