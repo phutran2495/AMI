@@ -35,6 +35,7 @@
                 "sudo apt-get install software-properties-common",
                 "sudo apt-add-repository universe",
                 "sudo apt-get update -y",
+                "sudo apt dist-upgrade -y",
                 "sudo apt install wget -y",
                 "sudo apt install python3.8 -y",
                 "sudo apt install python3-wheel -y",
