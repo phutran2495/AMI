@@ -5,7 +5,8 @@
         "aws_region": "",
         "subnet_id": "",
         "source_ami": "",
-        "ssh_username": "ubuntu"
+        "ssh_username": "ubuntu",
+        "prod_id": ""
     },
     "builders": [
         {
@@ -18,7 +19,7 @@
             "source_ami": "{{user `source_ami`}}",
             "ssh_username": "{{user `ssh_username`}}",
             "ami_name": "csye6225_{{timestamp}}",
-            "ami_users":["312608571387"],
+            "ami_users":["{{user `prod_id`}}"],
             "launch_block_device_mappings": [
                 {
                     "device_name": "/dev/sda1",
@@ -33,20 +34,11 @@
         {
             "type": "shell",
             "inline": [
-                "sudo apt-get install software-properties-common",
-                "sudo apt-add-repository universe",
+                "sleep 30",
                 "sudo apt-get update -y",
-                "sudo apt dist-upgrade -y",
                 "sudo apt install python3.8 -y",
-                "sudo apt install python3-pip -y",
-                "pip3 install bcrypt",
-                "pip3 install fastapi",
-                "pip3 install uvicorn",
-                "pip3 install PyMySQL",
-                "pip3 install mysql-connector-python",
-                "pip3 install boto3",
-                "pip3 install python-multipart",
-                "pip3 install pydantic",
+                "sudo apt install python3-pip -y --allow-unauthenticated",
+                "pip3 install bcrypt fastapi uvicorn PyMySQL mysql-connector-python boto3 python-multipart pydantic",
                 "sudo apt install wget -y",
                 "sudo apt-get install ruby-full -y ",
                 "cd /home/ubuntu",
@@ -55,7 +47,6 @@
                 "sudo ./install auto",
                 "sudo service codedeploy-agent start",
                 "sudo service codedeploy-agent status"   
-
             ]
         }
     ]
