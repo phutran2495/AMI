@@ -34,7 +34,8 @@
             "inline": [
                 "sudo apt-get update -y",
                 "sudo apt install wget -y",
-                "sudo apt install python3.8 && python3-dev -y --allow-unauthenticated",
+                "sudo apt install python3.8 -y ",
+                "sudo apt install python3-dev",
                 "sudo apt install python3-pip -y --allow-unauthenticated ",
                 "pip3 install bcrypt",
                 "pip3 install fastapi",
