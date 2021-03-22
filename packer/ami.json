@@ -31,11 +31,8 @@
     "provisioners": [
         {
             "type": "shell",
-            "inline": [
-                "sudo apt-get install software-properties-common",
-                "sudo apt-add-repository universe",
-                "sudo apt-get update -y",
-                "sudo apt dist-upgrade -y",
+            "inline": [             
+                "sudo apt-get update -y",             
                 "sudo apt install python3-pip -y",
                 "pip3 install bcrypt",
                 "pip3 install fastapi",
