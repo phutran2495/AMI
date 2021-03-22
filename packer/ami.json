@@ -35,8 +35,6 @@
                 "sudo apt-get update -y",
                 "sudo apt install wget -y",
                 "sudo apt install python3.8 -y ",
-                "pip --version",
-                "pip3 --version",
                 "sudo apt install python3-wheel",
                 "sudo apt install python3-pip -y --allow-unauthenticated ",
                 "pip3 install bcrypt",
