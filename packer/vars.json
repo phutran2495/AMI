@@ -3,6 +3,6 @@
     "aws_access_key":"{{env `AWS_ACCESS_KEY_ID`}}",
     "aws_secret_key":"{{env `AWS_SECRET_ACCESS_KEY`}}",
     "subnet_id":"subnet-0686d2443385887ba",
-    "source_ami":"ami-03d315ad33b9d49c4"
+    "source_ami":"ami-0b75998a97c952252"
     
 }
