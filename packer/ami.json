@@ -19,7 +19,7 @@
             "source_ami": "{{user `source_ami`}}",
             "ssh_username": "{{user `ssh_username`}}",
             "ami_name": "csye6225_{{timestamp}}",
-            "ami_users":["{{user `prod_id`}}"],
+            "ami_users":["709891834787"],
             "launch_block_device_mappings": [
                 {
                     "device_name": "/dev/sda1",
